@@ -23,7 +23,7 @@ export function LocationForm() {
                             placeholder="IST"
                             disabled={isEditing || isLoading}
                             required
-                            maxLength={3}
+                            maxLength={10}
                         />
                         <Input
                             label="Name"
@@ -32,6 +32,7 @@ export function LocationForm() {
                             placeholder="Istanbul Airport"
                             disabled={isLoading}
                             required
+                            maxLength={50}
                         />
                         <Input
                             label="City"
@@ -40,6 +41,7 @@ export function LocationForm() {
                             placeholder="Istanbul"
                             disabled={isLoading}
                             required
+                            maxLength={50}
                         />
                         <Input
                             label="Country"
@@ -48,6 +50,7 @@ export function LocationForm() {
                             placeholder="Turkey"
                             disabled={isLoading}
                             required
+                            maxLength={50}
                         />
                     </div>
 

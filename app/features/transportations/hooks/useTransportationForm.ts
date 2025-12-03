@@ -35,6 +35,12 @@ export function useTransportationForm(id?: string) {
                         originLocationCode: transportation.originLocationCode || "",
                         destinationLocationCode: transportation.destinationLocationCode || "",
                     });
+                } else if (locs.length > 0) {
+                    setFormData(prev => ({
+                        ...prev,
+                        originLocationCode: locs[0].code,
+                        destinationLocationCode: locs[0].code
+                    }));
                 }
             } catch (error) {
                 console.error("Failed to load data", error);

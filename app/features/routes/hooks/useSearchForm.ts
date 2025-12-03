@@ -10,7 +10,13 @@ export function useSearchForm(onSearch: (origin: string, destination: string, da
     const [locations, setLocations] = useState<LocationResponse[]>([]);
 
     useEffect(() => {
-        getLocationsList().then(locs => setLocations(locs));
+        getLocationsList().then(locs => {
+            setLocations(locs);
+            if (locs.length > 0) {
+                setOrigin(locs[0].code);
+                setDestination(locs[0].code);
+            }
+        });
     }, []);
 
     const handleSubmit = (e: React.FormEvent) => {
