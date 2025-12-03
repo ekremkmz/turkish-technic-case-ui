@@ -2,9 +2,7 @@ export enum TransportationType {
     BUS = "BUS",
     SUBWAY = "SUBWAY",
     UBER = "UBER",
-    TAXI = "TAXI",
-    FLIGHT = "FLIGHT",
-    TRAIN = "TRAIN"
+    FLIGHT = "FLIGHT"
 }
 
 export interface CreateTransportationDto {
